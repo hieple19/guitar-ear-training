@@ -1,0 +1,27 @@
+{
+  "name": "guitarapp",
+  "version": "1.0.0",
+  "description": "Simple Ear Training App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieple1912/guitar-ear-training.git"
+  },
+  "author": "Hiep Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hieple1912/guitar-ear-training/issues"
+  },
+  "homepage": "https://github.com/hieple1912/guitar-ear-training#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "howler": "^2.0.14"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
