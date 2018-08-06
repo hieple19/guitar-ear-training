@@ -1,28 +1,10 @@
-var stage1 = ["a", "d", "e"];
-
-$("#a").on("click", function() {
+$(".game__guess-buttons").on("click", function() {
   if (!gameOver) {
-    check($(this).attr("id"));
-    // guessed = $(this).attr("id");
-    guessed = $(this).textContent;
-    update($(this).text());
-  }
-});
-
-$("#d").on("click", function() {
-  if (!gameOver) {
-    check($(this).attr("id"));
-    // guessed = $(this).attr("id");
-    guessed = $(this).textContent;
-    update($(this).text());
-  }
-});
-
-$("#e").on("click", function() {
-  if (!gameOver) {
-    check($(this).attr("id"));
-    // guessed = $(this).attr("id");
-    guessed = $(this).textContent;
+    check(
+      $(this)
+        .text()
+        .toLowerCase()
+    );
     update($(this).text());
   }
 });
@@ -36,14 +18,12 @@ $("#listen").on("click", function() {
 });
 
 function chooseOne() {
-  return stage1[Math.floor(Math.random() * 3)];
+  return chords[Math.floor(Math.random() * 3)];
 }
 
 var currentChord = chooseOne();
-console.log(currentChord);
-
 var gameOver = false;
-var guessed = "";
+console.log(currentChord);
 
 function listen() {
   sounds[currentChord].sound.play();
@@ -67,7 +47,8 @@ function check(guessedChord) {
 
 let count = 1;
 function update(guessed) {
-  var toAdd = count + ". Guessed: " + guessed + " Correct: " + currentChord.toUpperCase();
+  var toAdd =
+    count + ". Guessed: " + guessed + " Correct: " + currentChord.toUpperCase();
   $(".past").append("<p>" + toAdd + "</p>");
   count++;
 }
