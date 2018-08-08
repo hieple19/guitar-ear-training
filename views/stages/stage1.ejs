@@ -1,4 +1,4 @@
-<% include ../../partials/header %>
+<% include ../partials/header %>
 
     <button href="/">Back</button>
 
@@ -7,21 +7,13 @@
     <button class="game__guess-buttons">E</button>
 
     <button id="listen">Listen again</button>
-    <button id="newgame">Another progressions</button>
+    <button class="newgame">Another Chord</button>
+    <button class="game__guess-change" style="float:right;">Switch Mode</button>
     <p id="result" style="height: 20px; border: 1px solid black"></p>
     <div class="past">
 
     </div>
 
-    <!-- <script> -->
-    <!-- // var sounds = JSON.parse(); -->
-    <!-- // console.log(sounds); -->
-    <!-- </script>  -->
-    <!-- <script>
-        sounds['a'].sound.play();
-    </script> -->
-
     <script src="/public/js/stages/stage1.js"></script>
-    <script src="/public/js/chordProgression.js"></script>
 
-    <% include ../../partials/footer %>
+    <% include ../partials/footer %>

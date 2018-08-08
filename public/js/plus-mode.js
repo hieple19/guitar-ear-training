@@ -1,5 +1,3 @@
-var chords = ["Am", "Dm", "Em"];
-var prevChords = ["A", "D", "E"];
 var plusMode = false;
 
 $(".plus-mode").on("click", () => {

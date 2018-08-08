@@ -1,8 +1,7 @@
 var onEnd = function() {
   console.log("onEnd");
-  console.log(playIndex);
-  console.log(playLoop);
-  if (playLoop === true) {
+  // console.log(playLoop);
+  if (playLoop) {
     if (playIndex + 1 !== currentChords.length) {
       playIndex = playIndex + 1;
       sounds[currentChords[playIndex]].sound.play();
@@ -33,6 +32,27 @@ var sounds = {
       onend: onEnd
     }),
     name: "E"
+  },
+  Am: {
+    sound: new Howl({
+      src: ["../public/lib/src/Am.wav"],
+      onend: onEnd
+    }),
+    name: "Am"
+  },
+  Dm: {
+    sound: new Howl({
+      src: ["../public/lib/src/Dm.wav"],
+      onend: onEnd
+    }),
+    name: "Dm"
+  },
+  Em: {
+    sound: new Howl({
+      src: ["../public/lib/src/Em.wav"],
+      onend: onEnd
+    }),
+    name: "Em"
   }
 };
 

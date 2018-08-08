@@ -1,11 +1,13 @@
 var gameOver = false;
-// var playLoop = true;
+var scr = true;
+var noChords = 1;
 var playIndex = 0;
 var gameCount = 1;
 
+
 function getChords() {
   var randomChords = [];
-  for (var i = 0; i < chords.length; i++) {
+  for (var i = 0; i < noChords; i++) {
     randomChords.push(chords[Math.floor(Math.random() * 3)]);
   }
   console.log(randomChords);
@@ -36,22 +38,32 @@ $(".game__guess-buttons").on("click", function() {
   }
 });
 
-$("#newgame").on("click", function() {
+$(".newgame").on("click", function() {
   newGame();
 });
 
 $("#listen").on("click", function() {
-  playChords(currentChords);
+  playChords();
+});
+
+$('.game__guess-change').on('click', () => {
+  scr = !scr;
+  if(scr){
+    noChords = 1;
+  } else {
+    noChords = 4;
+  }
+  newGame();
 });
 
 function update(guessedChord) {
   guessedChords.push(guessedChord);
   $("#result").text(guessedChords);
-  console.log("Guessed " + guessedChords);
+  // console.log("Guessed " + guessedChords);
   if (guessedChords.length === currentChords.length) {
     checkResults();
-    console.log("Guessed " + guessedChords);
-    console.log("Current " + currentChords);
+    // console.log("Guessed " + guessedChords);
+    // console.log("Current " + currentChords);
     gameOver = true;
   }
 }

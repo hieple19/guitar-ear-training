@@ -10,13 +10,17 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/stage1/scr", (req,res) => {
-  res.render("stages/stage1/stage1scr");
+app.get("/stage1", (req,res) => {
+  res.render("stages/stage1");
 });
 
-app.get("/stage1/cpr", (req,res) => {
-  res.render("stages/stage1/stage1cpr");
+app.get("/stage2", (req,res) => {
+  res.render("stages/stage2");
 });
+
+app.get("/*", (req,res) => {
+  res.redirect("/");
+})
 
 app.listen(3000, () => {
   console.log("starting now");
