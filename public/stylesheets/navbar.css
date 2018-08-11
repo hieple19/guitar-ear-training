@@ -1,0 +1,73 @@
+:root {
+  --drop-down-width: 420px;
+}
+
+.nav-bar {
+  padding: 0 80px;
+
+  background-color: #fff5f1;
+}
+.nav-bar * {
+  display: inline-block;
+  position: relative;
+  height: 80px;
+  /* height: 70px; */
+  /* padding-top: 10px; */
+  /* padding-bottom: 10px; */
+  font-family: "Montserrat", sans-serif; /* Consider stardos pencil */
+  font-weight: 500;
+}
+
+.nav-bar-right {
+  float: right;
+  line-height: 80px;
+  padding-left: 10px;
+}
+
+.nav-bar__dropdown-button {
+    max-height: 80px;
+  width: 60px;
+  /* padding: 10px; */
+  border-radius: 5px;
+
+  /* background: #061161; fallback for old browsers */
+  /* background: -webkit-linear-gradient(
+    to right,
+    #061161,
+    #780206); */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background-image: url("../images/guitar.svg");
+  background-size: 60px;
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  /* linear-gradient(to right, #061161, #780206);  */
+}
+
+.nav-bar__dropdown-content {
+  position: absolute;
+  display: none;
+  flex-wrap: wrap;
+  width: var(--drop-down-width);
+}
+.nav-bar__dropdown-stage {
+  display: inline-block;
+  height: calc(var(--drop-down-width) / 3);
+  flex-basis: 33%;
+  background: #d7e5e8;
+  border: 1px solid white;
+  /* padding: 10px; */
+  text-align: center;
+  line-height: calc(var(--drop-down-width) / 3);
+  font-size: 55px;
+}
+.nav-bar__dropdown-menu:hover .nav-bar__dropdown-content {
+  display: flex;
+}
+
+.nav-bar__dropdown-stage a {
+  color: #061161;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}

@@ -1,6 +1,6 @@
 var plusMode = false;
 
-$(".plus-mode").on("click", () => {
+$(".nav-bar__plus-mode").on("click", () => {
   plusMode = !plusMode;
   if (plusMode) {
     console.log("plusMode");
@@ -24,4 +24,18 @@ $(".plus-mode").on("click", () => {
     console.log(chords);
   }
   newGame();
+});
+
+$(".nav-bar__scr-mode").on("click", () => {
+  if (noChords !== 1) {
+    noChords = 1;
+    newGame();
+  }
+});
+
+$(".nav-bar__cpr-mode").on("click", () => {
+  if (noChords !== 4) {
+    noChords = 4;
+    newGame();
+  }
 });

@@ -1,5 +1,4 @@
 var gameOver = false;
-var scr = true;
 var noChords = 1;
 var playIndex = 0;
 var gameCount = 1;
@@ -46,15 +45,7 @@ $("#listen").on("click", function() {
   playChords();
 });
 
-$('.game__guess-change').on('click', () => {
-  scr = !scr;
-  if(scr){
-    noChords = 1;
-  } else {
-    noChords = 4;
-  }
-  newGame();
-});
+
 
 function update(guessedChord) {
   guessedChords.push(guessedChord);
