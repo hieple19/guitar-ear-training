@@ -1,6 +1,5 @@
 var onEnd = function() {
   console.log("onEnd");
-  // console.log(playLoop);
   if (playLoop) {
     if (playIndex + 1 !== currentChords.length) {
       playIndex = playIndex + 1;
@@ -56,4 +55,10 @@ var sounds = {
   }
 };
 
-
+function stopSound() {
+  for (var property in sounds) {
+    if (sounds.hasOwnProperty(property)) {
+      property.sound.stop();
+    }
+  }
+}

@@ -1,23 +1,25 @@
 <% include ../partials/header %>
 
-    <button href="/">Back</button>
+    <div class="game__status">
+        <i class="game__status-replay_icon"></i>
+        <div class="game__status-progress"></div>
+        <i class="game__status-next_icon"></i>
+    </div>
+    </div>
+    <div class="game__guess">
+        <div class="game__guess-buttons plus-chord ">A</div>
+        <div class="game__guess-buttons ">Am</div>
+        <div class="game__guess-buttons plus-chord ">D</div>
+        <div class="game__guess-buttons ">Dm</div>
+        <div class="game__guess-buttons plus-chord ">E</div>
+        <div class="game__guess-buttons ">Em</div>
+    </div>
 
-    <button class="game__guess-buttons plus-chord">A</button>
-    <button class="game__guess-buttons plus-chord">D</button>
-    <button class="game__guess-buttons plus-chord">E</button>
-    <button class="game__guess-buttons">Am</button>
-    <button class="game__guess-buttons">Dm</button>
-    <button class="game__guess-buttons">Em</button>
 
-
-    <button id="listen">Listen again</button>
-    <button id="newgame">Another Chord</button>
-    <p id="result" style="height: 20px; border: 1px solid black"></p>
-    <div class="past">
+    <div class="past ">
 
     </div>
 
-    <script src="/public/js/stages/stage2.js"></script>
-    <script src="/public/js/game.js"></script>
+    <script src="/public/js/stages/stage2.js "></script>
 
     <% include ../partials/footer %>

@@ -1,0 +1,1 @@
+- Stop sounds when new game is started

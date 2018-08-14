@@ -20,6 +20,69 @@ body {
   -moz-osx-font-smoothing: grayscale; /* smoother rendering of fonts */
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.game__status {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 600px;
+  height: 100px;
+}
+
+
+.game__status-replay_icon {
+  /* display: inline-block; */
+  flex: 1;
+  cursor: pointer;
+  height: 100%;
+  width: 40px;
+  background: url(../images/replay2.svg);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.game__status-next_icon {
+  /* display: inline-block; */
+  flex: 1;
+  cursor: pointer;
+  height: 100%;
+  width: 40px;
+  background: url(../images/next.svg);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.game__status-progress {
+  /* display: block; */
+  flex: 5;
+  /* margin: 0 auto; */
+  vertical-align: top;
+  /* position: absolute; */
+  text-align: center;
+  line-height: 100px;
+  /* padding-top: 10px; */
+  font-size: 30px;
+  width: 400px;
+  word-spacing: 7px;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.game__guess {
+  display: flex;
+  flex-wrap: wrap;
+  width: 420px;
+  margin: 0 auto;
+}
+
+.game__guess-buttons {
+  flex-basis: 33%;
+  height: 50px;
+  border: 1px solid black;
 }

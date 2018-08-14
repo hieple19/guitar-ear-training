@@ -1,16 +1,18 @@
 :root {
   --drop-down-width: 420px;
+  --nav-bar-height: 50px;
 }
 
 .nav-bar {
   padding: 0 80px;
-
-  background-color: #fff5f1;
+  border-top: 1px solid #00422b;
+  background-color: #fcf7ff;
 }
 .nav-bar * {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: var(--nav-bar-height);
+  color: #00422b74;
   /* height: 70px; */
   /* padding-top: 10px; */
   /* padding-bottom: 10px; */
@@ -18,15 +20,16 @@
   font-weight: 500;
 }
 
-.nav-bar-right {
+.nav-bar__right {
   float: right;
-  line-height: 80px;
-  padding-left: 10px;
+  cursor: pointer;
+  line-height: var(--nav-bar-height);
+  margin: 0 10px;
 }
 
 .nav-bar__dropdown-button {
-    max-height: 80px;
-  width: 60px;
+  max-height: var(--nav-bar-height);
+  width: var(--nav-bar-height);
   /* padding: 10px; */
   border-radius: 5px;
 
@@ -37,7 +40,7 @@
     #780206); */
   /* Chrome 10-25, Safari 5.1-6 */
   background-image: url("../images/guitar.svg");
-  background-size: 60px;
+  background-size: 53px;
   background-position: 50% 60%;
   background-repeat: no-repeat;
   /* linear-gradient(to right, #061161, #780206);  */
@@ -70,4 +73,13 @@
   width: 100%;
   height: 100%;
   text-decoration: none;
+}
+
+.nav-bar__selected {
+  border-bottom: 1.5px solid #00422b;
+  color: #00422b;
+}
+
+.nav-bar__right:hover {
+  color: #00422b;
 }
