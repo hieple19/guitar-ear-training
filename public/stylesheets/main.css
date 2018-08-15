@@ -2,6 +2,11 @@
 
 html {
   box-sizing: border-box;
+  background: radial-gradient(
+    circle at 75% 75%,
+    #fdfaf7,
+    #ffffff
+  );
 }
 
 *,
@@ -22,6 +27,7 @@ body {
 
 body {
   font-family: "Roboto", sans-serif;
+  
 }
 
 .game__status {
@@ -33,14 +39,13 @@ body {
   height: 100px;
 }
 
-
 .game__status-replay_icon {
   /* display: inline-block; */
   flex: 1;
   cursor: pointer;
   height: 100%;
   width: 40px;
-  background: url(../images/replay2.svg);
+  background: url(../images/replay.svg);
   background-size: 40px;
   background-repeat: no-repeat;
   background-position: center;
@@ -59,14 +64,10 @@ body {
 }
 
 .game__status-progress {
-  /* display: block; */
   flex: 5;
-  /* margin: 0 auto; */
   vertical-align: top;
-  /* position: absolute; */
   text-align: center;
   line-height: 100px;
-  /* padding-top: 10px; */
   font-size: 30px;
   width: 400px;
   word-spacing: 7px;
@@ -77,12 +78,56 @@ body {
 .game__guess {
   display: flex;
   flex-wrap: wrap;
-  width: 420px;
+  width: 390px;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
 .game__guess-buttons {
-  flex-basis: 33%;
-  height: 50px;
-  border: 1px solid black;
+  flex-basis: 31%;
+  cursor: pointer;
+  height: 65px;
+  line-height: 65px;
+  color: #00422b;
+  background: #e8f3f5;
+  margin: 3px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.game__guess-buttons:hover{
+  box-shadow: 0 0 5px rgba(0, 66, 43, 1.2);
+}
+
+.game__results{
+  margin: 30px auto;
+  width: 200px;
+  display: flex;
+  /* border: 1px solid black; */
+  flex-wrap: wrap;
+}
+.game__results-correct{
+  flex: 1 1 50%;;
+  height: 120px;
+  background: url('../images/check-symbol.svg');
+  background-size: 90px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.game__results-wrong{
+  flex: 1 1 50%;
+  height: 120px;
+  background: url('../images/close.svg');
+  background-size: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.game__results-actual{
+  margin-top: 10px;
+  flex-basis: 100%;
+  text-align: center;
 }

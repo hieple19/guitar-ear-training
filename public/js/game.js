@@ -63,9 +63,14 @@ function update(guessedChord) {
 
 function checkResults() {
   if (compareArrays(guessedChords, currentChords)) {
-    $("#result").text("Correct");
+    $(".game__results-correct").css("display", "block");
+    $(".game__results-wrong").css("display", "none");
+    $(".game__results-actual").css("display", "none");
   } else {
-    $("#result").text("Wrong!");
+    $(".game__results-wrong").css("display", "block");
+    $(".game__results-correct").css("display", "none");
+    $(".game__results-actual").css("display", "block");
+    $(".game__results-actual-chord").text(formatArrayString(currentChords));
   }
   var toAdd =
     gameCount + ". Guessed: " + guessedChords + " Correct: " + currentChords;

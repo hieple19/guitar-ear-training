@@ -1,1 +1,2 @@
 - Stop sounds when new game is started
+- effects when showing ticks

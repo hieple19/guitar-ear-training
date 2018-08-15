@@ -55,10 +55,10 @@ var sounds = {
   }
 };
 
-function stopSound() {
-  for (var property in sounds) {
-    if (sounds.hasOwnProperty(property)) {
-      property.sound.stop();
-    }
-  }
-}
+// function stopSound() {
+//   for (var property in sounds) {
+//     if (sounds.hasOwnProperty(property)) {
+//       property.sound.stop();
+//     }
+//   }
+// }
