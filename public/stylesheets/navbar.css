@@ -40,10 +40,10 @@
     #780206); */
   /* Chrome 10-25, Safari 5.1-6 */
   background-image: url("../images/guitar.svg");
-  background-size: 53px;
+  background-size: 45px;
   background-position: 50% 60%;
   background-repeat: no-repeat;
-  /* linear-gradient(to right, #061161, #780206);  */
+  linear-gradient(to right, #061161, #780206); 
 }
 
 .plus-chord{
