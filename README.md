@@ -14,7 +14,7 @@ To do:
 Interface
     - Add a logo which will lead to landing page
     - Add clue mode which will allow the player to play every chord and compare to actual chord in game
-    - Add a pop-up box to keep track of player progress 
+    - Add a pop-up box to keep track of player progress (IN PROGRESS)
 
 Function:
     - May limit each game to 10 chords? Endless mode?

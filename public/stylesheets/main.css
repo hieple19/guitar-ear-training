@@ -85,13 +85,10 @@ body {
   box-shadow: 0 0 5px rgba(0, 66, 43, 1.2);
 }
 
-<<<<<<< HEAD
 .game__guess > .plus-chord{
   display: none;
 }
 
-=======
->>>>>>> 62f14a8466261301942b8979bf20c8d082f9aff9
 .game__results {
   margin: 30px auto;
   width: 200px;

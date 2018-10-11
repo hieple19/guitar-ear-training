@@ -35,16 +35,9 @@
   line-height: var(--nav-bar-height);
 
   background-image: url("../images/guitar.svg");
-<<<<<<< HEAD
   background-size: 30px;
   background-position: 50% 60%;
   background-repeat: no-repeat;
-=======
-  background-size: 45px;
-  background-position: 50% 60%;
-  background-repeat: no-repeat;
-  linear-gradient(to right, #061161, #780206); 
->>>>>>> 62f14a8466261301942b8979bf20c8d082f9aff9
 }
 
 .nav-bar__dropdown-button {
