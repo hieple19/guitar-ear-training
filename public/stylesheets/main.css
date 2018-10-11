@@ -2,34 +2,25 @@
 
 html {
   box-sizing: border-box;
-  background: radial-gradient(
-    circle at 75% 75%,
-    #fdfaf7,
-    #ffffff
-  );
+  background: radial-gradient(circle at 75% 75%, #fdfaf7, #ffffff);
 }
-
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; /* smoother rendering of fonts */
 }
-
 body {
   font-family: "Roboto", sans-serif;
-  
+  position: relative;
 }
-
 .game__status {
   position: relative;
   display: flex;
@@ -38,7 +29,6 @@ body {
   width: 600px;
   height: 100px;
 }
-
 .game__status-replay_icon {
   /* display: inline-block; */
   flex: 1;
@@ -50,7 +40,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .game__status-next_icon {
   /* display: inline-block; */
   flex: 1;
@@ -62,7 +51,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .game__status-progress {
   flex: 5;
   vertical-align: top;
@@ -74,7 +62,6 @@ body {
   height: 100%;
   border: 1px solid black;
 }
-
 .game__guess {
   display: flex;
   flex-wrap: wrap;
@@ -82,7 +69,6 @@ body {
   margin: 0 auto;
   margin-top: 40px;
 }
-
 .game__guess-buttons {
   flex-basis: 31%;
   cursor: pointer;
@@ -95,39 +81,130 @@ body {
   text-align: center;
   font-size: 25px;
 }
-
-.game__guess-buttons:hover{
+.game__guess-buttons:hover {
   box-shadow: 0 0 5px rgba(0, 66, 43, 1.2);
 }
 
-.game__results{
+.game__guess > .plus-chord{
+  display: none;
+}
+
+.game__results {
   margin: 30px auto;
   width: 200px;
-  display: flex;
-  /* border: 1px solid black; */
+  display: flex; /* border: 1px solid black; */
   flex-wrap: wrap;
 }
-.game__results-correct{
-  flex: 1 1 50%;;
+.game__results-correct {
+  flex: 1 1 50%;
   height: 120px;
-  background: url('../images/check-symbol.svg');
+  background: url("../images/check-symbol.svg");
   background-size: 90px;
   background-position: center;
   background-repeat: no-repeat;
-
 }
-
-.game__results-wrong{
+.game__results-wrong {
   flex: 1 1 50%;
   height: 120px;
-  background: url('../images/close.svg');
+  background: url("../images/close.svg");
   background-size: 70px;
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.game__results-actual{
+.game__results-actual {
   margin-top: 10px;
   flex-basis: 100%;
   text-align: center;
+}
+.game__past {
+  position: fixed;
+  /* vertical-align: top; */
+  top: 50vh;
+}
+
+.game__past-modal {
+  width: 105px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid black;
+  padding-left: 5px;
+}
+
+.game__past-modal > * {
+  display: inline-block;
+}
+
+.game__past-modal-tick {
+  /* display: inline-block; */
+  /* margin-left: 5px; */
+  vertical-align: top;
+  width: 30px;
+  height: 100%;
+  background: url("../images/check-symbol.svg");
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.game__past-cross {
+  /* display: inline-block; */
+  height: 100%;
+  vertical-align: top;
+  width: 30px;
+  background: url("../images/close.svg");
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.game__past-correct-count {
+  /* display: inline-block; */
+  /* vertical-align: top; */
+  height: 30px;
+}
+
+.game__past-count {
+  /* display: inline-block; */
+  /* vertical-align: top; */
+  height: 30px;
+}
+
+.game__past-details {
+  border: 1px solid black;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+.game__past-details-correct,
+.game__past-details-wrong {
+  height: 30px;
+}
+.game__past-details-correct > *,
+.game__past-details-wrong > * {
+  display: inline-block;
+}
+
+.game__past-details-count {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.game__past-details-tick {
+  vertical-align: top;
+  width: 17px;
+  height: 100%;
+  background: url("../images/check-symbol.svg");
+  background-size: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.game__past-details-cross {
+  vertical-align: top;
+  width: 15px;
+  height: 100%;
+  background: url("../images/close.svg");
+  background-size: 12.75px;
+  background-position: center;
+  background-repeat: no-repeat;
 }

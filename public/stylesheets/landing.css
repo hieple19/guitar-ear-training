@@ -1,0 +1,49 @@
+:root{
+    --landing__table-width: 400px;
+    --landing__table-cell-height: 50px;
+}
+
+.landing__table{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 20vh;
+    max-width: var(--landing__table-width);
+    background: #e8f3f5;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.landing__table-stage{
+    height: var(--landing__table-cell-height);
+    line-height: var(--landing__table-cell-height);
+    flex-basis: 30%;   
+    border: 1px solid #ffffff;
+
+    text-align: center;
+}
+
+.landing__table-chord{
+    height: var(--landing__table-cell-height);
+    line-height: var(--landing__table-cell-height);
+    border: 1px solid #ffffff;
+    flex-basis: 70%;
+    text-align: center;
+}
+
+.chord-name:hover{
+    color: #00422b;
+  background: #c8dde0;
+}
+
+a{
+    text-decoration: none;
+    color: #061161;
+    display: block;
+    width: calc(70%*var(--landing__table-width));
+    height: var(--landing__table-cell-height);
+
+}
+

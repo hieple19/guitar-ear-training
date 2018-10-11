@@ -3,8 +3,17 @@ var noChords = 1;
 var playIndex = 0;
 var gameCount = 1;
 
+
+function hideResult(){
+  $(".game__results").css("display","none");
+};
+
+
+
 function getChords() {
   var randomChords = [];
+  // hideResult();
+  $(".game__results").css("display","none");
   for (var i = 0; i < noChords; i++) {
     randomChords.push(chords[Math.floor(Math.random() * chords.length)]);
   }
@@ -63,18 +72,20 @@ function update(guessedChord) {
 
 function checkResults() {
   if (compareArrays(guessedChords, currentChords)) {
+    $(".game__results").css("display","flex");
     $(".game__results-correct").css("display", "block");
     $(".game__results-wrong").css("display", "none");
     $(".game__results-actual").css("display", "none");
   } else {
+    $(".game__results").css("display","flex");
     $(".game__results-wrong").css("display", "block");
     $(".game__results-correct").css("display", "none");
     $(".game__results-actual").css("display", "block");
     $(".game__results-actual-chord").text(formatArrayString(currentChords));
   }
-  var toAdd =
-    gameCount + ". Guessed: " + guessedChords + " Correct: " + currentChords;
-  $(".past").append("<p>" + toAdd + "</p>");
+  // var toAdd =
+  //   gameCount + ". Guessed: " + guessedChords + " Correct: " + currentChords;
+  // $(".past").append("<p>" + toAdd + "</p>");
   gameCount++;
 }
 

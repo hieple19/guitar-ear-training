@@ -16,16 +16,29 @@
 
     </div>
 
-    
-    <div class="game__results">
-        <div class="game__results-correct"></div>
-        <div class="game__results-wrong"></div>
-        <div class="game__results-actual">Ans: <span class="game__results-actual-chord">Am</span></div>
-    </div>
+<% include ../partials/game_results %>
 
+    <div class="game__past">
+        <div class="game__past-modal">
+            <div class="game__past-modal-tick"></div>
+            <div class="game__past-correct-count">0 / </div>
+            <div class="game__past-count">0</div>
+        </div>
 
-    <div class="past ">
+        <div class="game__past-details">
+            <div class="game__past-details-correct">
+                <div class="game__past-details-count">1. </div>
+                <div class="game__past-details-chord-correct">Am</div>
+                <div class="game__past-details-tick"></div>
+            </div>
 
+            <div class="game__past-details-wrong">
+                <div class="game__past-details-count">2. </div>
+                <div class="game__past-details-chord-wrong">Am</div>
+                <div class="game__past-details-cross"></div>
+                <div class="game__past-details-chord-correct">Em</div>
+            </div>
+        </div>
     </div>
 
     <script src="/public/js/stages/stage2.js "></script>

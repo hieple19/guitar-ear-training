@@ -18,9 +18,13 @@ app.get("/stage2", (req,res) => {
   res.render("stages/stage2");
 });
 
+app.get("/stage3", (req,res) => {
+  res.render("stages/stage3");
+});
+
 app.get("/*", (req,res) => {
   res.redirect("/");
-})
+});
 
 app.listen(3000, () => {
   console.log("starting now");

@@ -1,9 +1,17 @@
 <% include ./partials/header %>
 
-    <a href="/stage1"><button>Stage 1</button></a>
-    <a href="/stage2"><button>Stage 2</button></a>
+<div class="landing__table">
+    <div class="landing__table-stage">Stage</div>
+    <div class="landing__table-chord">Chords</div>
 
-    <% include ./partials/footer %>
+    <div class="landing__table-stage">1</div>
+    <div class="landing__table-chord chord-name"><a href="/stage1">A D E</a></div>
 
+    <div class="landing__table-stage">2</div>
+    <div class="landing__table-chord chord-name"><a href="/stage2">Am Dm Em</a></div>
 
-    
+    <div class="landing__table-stage">3</div>
+    <div class="landing__table-chord chord-name"><a href="/stage3">C F G</a></div>
+</div>
+
+<% include ./partials/footer %>
