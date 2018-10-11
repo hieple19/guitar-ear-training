@@ -1,8 +1,8 @@
 To run app:
-    - Clone repository
-    - Run "npm install" command for node packages
-    - Run "node index.js" command
-    - Go to "localhost:3000"
+- Clone repository
+- Run "npm install" command for node packages
+- Run "node index.js" command
+- Go to "localhost:3000"
 
 Basic gameplay:
     - Choose stages which correspond to different chords
